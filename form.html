@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sign up</title>
+
+</head>
+<body>
+   <style>
+       * {
+ 
+        padding: 0;
+    margin: 0;
+box-sizing: border-box;}
+
+.fcontainer{
+width: 300px;
+padding: 12px 20px;
+  margin: 8px 0;
+}
+.grid-2{
+    widows: 100%;
+    padding: 12px 20px;
+  margin: 8px 0;
+}
+.grid-3{
+    widows: 100%;
+    padding: 12px 20px;
+  margin: 8px 0;
+}
+
+
+    </style>
+<form class="my-form">
+    <div class="fcontainer">
+      <h1>Sign up</h1>
+      <ul>
+        <li> 
+        <select>
+            <option selected disabled>-- Please choose an option --</option>
+            <option>Request Menu</option>
+            <option> Get Newsletter</option>
+            <option>Other</option>      
+          </select> 
+        </li>  
+        <li>   
+        <div class="grid-2">
+            <input type="text" placeholder="Name" required>  
+            <input type="text" placeholder="Surname" required>
+          </div>
+        </li> 
+        <li>   
+        <div class=" grid-2">
+            <input type="email" placeholder="Email" required>  
+            <input type="tel" placeholder="Phone">
+          </div> 
+        </li> 
+        <li>
+        <input type="checkbox" id="terms">
+<label for="terms">I have read and agreed with all terms and conditions </label>
+</li>
+<li>
+<div class="grid-3">
+    <button class="btn-grid" type="submit" disabled>
+      <span class="back">
+      </span>
+      <span class="front">SUBMIT</span>
+    </button>
+    <button class="btn-grid" type="reset">
+      <span class="back">
+      </span>
+      <span class="front">RESET</span>
+    </button> 
+  </div>
+</li>
+</ul>
+
+<script>
+const checkbox = document.querySelector('.my-form input[type="checkbox"]');
+const btns = document.querySelectorAll(".my-form button");
+ 
+checkbox.addEventListener("change", function() {
+  const checked = this.checked;
+  for (const btn of btns) {
+    checked ? (btn.disabled = false) : (btn.disabled = true);
+  }
+});
+</script>
+    </div>
+</body>
+</html>
